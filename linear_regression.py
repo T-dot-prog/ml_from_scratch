@@ -13,7 +13,7 @@ def cost_function(x, y , w, b):
             cost = (y_pred - y[i]) ** 2
             cost_sum += cost
 
-        total_cost = (1/(2 * m)) * cost_sum
+        total_cost = (1/(2 * m)) * cost_sum # (1/2m) * (y-y_pred) **2
         return total_cost
     
 def gradient_function(x, y, w, b):
