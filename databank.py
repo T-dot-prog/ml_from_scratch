@@ -16,7 +16,15 @@ class Databank:
         print(f'The path is valid so here is the path: {path}')
 
         return path
+    
+    @staticmethod
+    def data_for_logistic_regression(local_path: str = "adult.csv") -> any:
+        """Data for logistic regression"""
+        import pandas as pd 
 
+        df = pd.read_csv(filepath_or_buffer= local_path)
+
+        return df
 data_bank = Databank()
 
 __all__ = ['data_bank']
